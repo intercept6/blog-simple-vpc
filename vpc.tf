@@ -1,7 +1,7 @@
 resource "aws_vpc" "main" {
   cidr_block           = "${var.cidr_block}"
-  enable_dns_hostnames = true
-  enable_dns_support   = true
+  enable_dns_hostnames = false
+  enable_dns_support   = false
   tags                 = "${merge(local.base_tag, map("Name", "${local.base_name}-vpc"))}"
 }
 
